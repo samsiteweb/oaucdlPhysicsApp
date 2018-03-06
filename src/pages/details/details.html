@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color='primary'>
+        <button ion-button menuToggle icon-only start>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>
+            {{getTopic.title}}
+        </ion-title>
+      </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <div style="text-align: center; color:rgb(173, 173, 173)">{{getTopic.intro}} </div>
+        <ion-card *ngFor="let questions of getQuestions;  let i = index">
+
+            <ion-chip color="light" style="margin-top: -3%;" >
+                <ion-label color="primary" >Question  {{i+1}}</ion-label>
+              </ion-chip>
+            <ion-card-content>
+              {{questions.content}}
+            </ion-card-content>
+            <div style="text-align: right; margin: -2%">
+            <ion-chip color="primary" (click)="showAns(questions)">
+                <ion-label color="light">Ans.</ion-label>
+              </ion-chip>
+            </div>
+          </ion-card>
+   
+   
+  </ion-list>
+
+</ion-content>

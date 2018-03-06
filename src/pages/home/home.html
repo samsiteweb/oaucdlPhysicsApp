@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color='primary'>
+        <button ion-button menuToggle icon-only start>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>
+          Home
+        </ion-title>
+      </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let topic of topic" (click)= "Action(topic)" >
+      <ion-avatar item-start>
+        <img src= "{{topic.avatar}}">
+      </ion-avatar>
+      <h2>{{topic.title}}</h2>
+      <p>These incluses Questions & Ans on <br> {{topic.title}} <br><span style="color: black"> Click to Explore </span> </p>
+      <!-- <button ion-button small > Enter </button> -->
+    </ion-item>
+   
+  </ion-list>
+
+</ion-content>

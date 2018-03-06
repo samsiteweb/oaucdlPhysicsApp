@@ -1,0 +1,51 @@
+
+<ion-header>
+    <ion-navbar color='primary'>
+        <button ion-button menuToggle icon-only start>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>
+          Welcome
+        </ion-title>
+      </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid >
+    <ion-row margin-top="50px">
+      <ion-col class="cont">
+        
+          <div class="profile-view__image-container" style="background-color: rgb(226, 243, 70)" (click)="pushFormula()"> 
+            <p style="margin: 5%; color: rgb(158, 158, 180); position: absolute">My <br>Formulas</p>
+            <img src="img/emc.png" style="border-radius:10px; height: 100%; position: relative" >
+         
+          </div>
+        
+      </ion-col>
+      <ion-col class="cont" >
+          <div class="profile-view__image-container" style="background-color:rgb(236, 233, 236) " (click)="pushQuestion()">
+            <img src="img/question.png" style=" border-radius:10px; height: 100%; width:100%; position: relative" >
+            <p style=" margin-left: 50%; margin-top: -25%; color: rgb(158, 158, 180); position: absolute">Practice <br> Questions</p>
+          </div>
+        </ion-col>
+    </ion-row>
+    <ion-row margin-top="50px">
+      <ion-col class="cont">
+          <div class="profile-view__image-container" style="background-color: rgb(182, 230, 241);"(click)="pushHelp()">
+              <img src="img/help.png" style="border-radius:10px; margin-top: 0px; height: 100%; position: relative"  >
+              <p style="margin-top:-25%;margin-left: 60%; color: rgb(158, 158, 180); position: absolute">Help <br> Forum</p>
+          </div>
+      </ion-col>
+      <ion-col class="cont">
+          <div class="profile-view__image-container" style="background-color: #e0e0e0;">
+              
+              <img src="img/aboutus.png" style="border-radius:10px; margin-top: 0px; height: 100%; position: relative" (click)="pushAbout()"  >
+              <!-- <p style="margin-top:-40px;margin-left: 90px; color: rgb(235, 235, 245); position: absolute">Help <br> Forum</p> -->
+          </div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
